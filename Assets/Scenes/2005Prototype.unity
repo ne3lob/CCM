@@ -363,7 +363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6044064565787132466, guid: c4157ba4263c6ce409acba77e15657f0, type: 3}
       propertyPath: geomCap
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6044064565787132466, guid: c4157ba4263c6ce409acba77e15657f0, type: 3}
       propertyPath: colorMode

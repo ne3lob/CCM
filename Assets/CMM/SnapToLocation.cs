@@ -8,6 +8,9 @@ public class SnapToLocation : MonoBehaviour
     
     // bools
 
+    private GameObject point_2;
+    
+
     private bool insideSnapZone;
     private bool grabbed;
 
@@ -25,7 +28,7 @@ public class SnapToLocation : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.Tag == "Line")
+        if (other.gameObject.tag == "Line")
         {
             insideSnapZone = true;
         }
@@ -33,7 +36,7 @@ public class SnapToLocation : MonoBehaviour
     
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.Tag == "Line")
+        if (other.gameObject.tag == "Line")
         {
             insideSnapZone = false;
         }
@@ -43,7 +46,7 @@ public class SnapToLocation : MonoBehaviour
     {
         if (grabbed == false && insideSnapZone == true)
         {
-            snapObject.gameObject.transform.position = point_2.position;
+            snapObject.gameObject.transform.position = point_2.gameObject.transform.position;
         }
     }
 }
