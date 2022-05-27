@@ -770,8 +770,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   line: {fileID: 395861964}
-  point_1: {fileID: 2030236401}
-  point_2: {fileID: 189933500}
+  snapObject: {fileID: 462754170}
+  point_2: {fileID: 637316330}
 --- !u!4 &395861966
 Transform:
   m_ObjectHideFlags: 0
