@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Oculus.Interaction;
+using Oculus.Interaction.PoseDetection;
 using UnityEngine;
 
 public class Punkte : MonoBehaviour
@@ -12,16 +14,28 @@ public class Punkte : MonoBehaviour
     private GameObject point;
     private int index;
     private int pointsOn_Count;
+
+    private ActiveStateUnityEventWrapper ActiveStateUnityEventWrapper;
     
     // Start is called before the first frame update
     void Start()
     {
-        pointsOn_Count = 2;
+        
+      //  pointsOn_Count = 2;
         foreach (var p in points)
         {
             toEnable.Add(p);
-            p.GetComponent<MeshRenderer>().material = pickMaterial[Random.Range(0, pickMaterial.Length)];
-
+            p.GetComponent<MeshRenderer>().sharedMaterial = pickMaterial[Random.Range(0, pickMaterial.Length)];
+            if (p.GetComponent<MeshRenderer>().sharedMaterial == pickMaterial[0])
+            {
+                Debug.Log(pickMaterial[0]);
+                p.gameObject.tag = "RedPoint";
+            }
+            else if (p.GetComponent<MeshRenderer>().sharedMaterial == pickMaterial[1])
+            {
+                p.gameObject.tag = "BluePoint";
+            }
+            
             //p.GetComponent<MeshRenderer>().enabled = false;
         }
         Debug.Log(toEnable.Count);
@@ -31,12 +45,16 @@ public class Punkte : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //TODO DELETE IT FROM UPDATE
+        
         if (pickPoints)
         {
             LightOn();
         }
         
         DisablePoints();
+
+       
     }
 
     private void LightOn()
@@ -46,7 +64,7 @@ public class Punkte : MonoBehaviour
         toEnable.Remove(pickPoint);
         pickPoints = false;
         
-        Debug.Log(toEnable.Count);
+        Debug.Log("List toEnable: "+toEnable.Count);
     }
 
     private void DisablePoints()
@@ -56,4 +74,16 @@ public class Punkte : MonoBehaviour
             p.SetActive(false);
         }
     }
+
+     public void Pick()
+     {
+         pickPoints =true;
+     }
+
+     public void ChechMat()
+     {
+         ;
+         
+     }
+     
 }
