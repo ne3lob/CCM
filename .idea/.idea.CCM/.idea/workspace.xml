@@ -11,6 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/CMM/Scripts/Brit_Punkte.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CMM/Scripts/PointCatch.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -78,6 +79,7 @@
       <workItem from="1653674595605" duration="2473000" />
       <workItem from="1653904080603" duration="8137000" />
       <workItem from="1654003642540" duration="789000" />
+      <workItem from="1654519906058" duration="3762000" />
     </task>
     <servers />
   </component>

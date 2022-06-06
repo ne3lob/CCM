@@ -16,6 +16,8 @@ public class Sound : MonoBehaviour
     
     [SerializeField] 
     private Punkte punkteScript;
+    [SerializeField]
+    private Brit_Punkte britPunkteScript;
     void Start()
     {
         aSource = GetComponent<AudioSource>();
@@ -56,6 +58,7 @@ public class Sound : MonoBehaviour
         yield return new WaitForSeconds(aSource.clip.length + 3f);
         
         punkteScript.pickPoints = true;
+        britPunkteScript.pickPoints = true;
         clipIndex++;
         aSource.clip = speech[clipIndex];
         Debug.Log("Next Sound: " + aSource.clip.name);
