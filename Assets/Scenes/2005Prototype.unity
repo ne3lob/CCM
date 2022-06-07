@@ -10511,11 +10511,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e203cd96e23bd7549805ab3344a23972, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.314
+      value: 4.714
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e203cd96e23bd7549805ab3344a23972, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.245
+      value: 4.242
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e203cd96e23bd7549805ab3344a23972, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15085,14 +15085,14 @@ MonoBehaviour:
   blendingMode: 0
   spotAngleFromLight: 1
   spotAngle: 35
-  coneRadiusStart: 0.28
+  coneRadiusStart: 0.16
   shaderAccuracy: 0
   geomMeshType: 0
   geomCustomSides: 24
   geomCustomSegments: 5
   skewingLocalForwardDirection: {x: 0, y: 0, z: 1}
   clippingPlaneTransform: {fileID: 0}
-  geomCap: 1
+  geomCap: 0
   fallOffEndFromLight: 1
   attenuationEquation: 1
   attenuationCustomBlending: 0.5
